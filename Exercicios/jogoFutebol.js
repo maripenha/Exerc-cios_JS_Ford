@@ -12,3 +12,16 @@
 
 //saida
 // = informar o resultado do jogo de futebol
+
+const timeUm = prompt("Insira o nome do time")
+const timeDois = prompt("Insira o nome do time")
+const golUm = parseInt(prompt(`Quantos gols ${timeUm} fez?`))
+const golDois = parseInt(prompt(`Quantos gols ${timeDois} fez?`))
+
+if(golUm > golDois){
+    alert(`${timeUm} ganhou do ${timeDois}`)
+}else if(golDois > golUm){
+    alert(`${timeDois} ganhou do ${timeUm}`)
+}else if(golUm == golDois){
+    alert(`${timeUm} empatou com ${timeDois}`)
+}

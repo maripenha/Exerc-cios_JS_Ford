@@ -5,10 +5,8 @@
 // − Triângulo    Escaleno:    possui    3    lados    diferentes.
 
 
-
-
 //entrada de dados
-// = informar as 3 medidas de um triangulo
+// = informar as 3 medidas de um triangulo~
 
 //processamento
 // = verificar se o triangulo tem os 3 lados igual ou 2 lados iguais ou os 3 lados diferentes
@@ -17,3 +15,17 @@
 //saida de dados
 // = informar se o triangulo é equilátero, escaleno ou isócele
 // = motrar a saída do programa na console
+
+const ladoUm = parseFloat(prompt("Digite o comprimento do primeiro lado do triângulo"))
+const ladoDois = parseFloat(prompt("Digite o comprimento do segundo lado do triângulo"))
+const ladoTres = parseFloat(prompt("Digite o comprimento do terceiro lado do triângulo"))
+
+
+if (ladoUm == ladoDois && ladoDois == ladoTres){
+    alert("O triângulo é equilátero")
+}else if(ladoUm !== ladoDois && ladoUm !== ladoTres && ladoDois !== ladoTres){
+    alert(`O triângulo é escaleno`)
+}else{
+    alert(`O triângulo é isóceles`)
+}
+
