@@ -27,13 +27,71 @@
 //saida de dados
 // = mostrar a porcentagem de desconto se for alcool ou se for gasolina
 
-let tipo = prompt("Qual tipo de combustível você deseja \n A- Álcool G- Gasolina")
-switch(tipo){
-    case A:
-        let quantidade = parseInt(prompt("Quantos litros de álcool você deseja?"))
-        var valor = 4.90
+const tipo = prompt("Qual tipo de combustivel você deseja: \n A - Álcool \n G - Gasolina").toLocaleUpperCase()
 
-        if (quantidade == 20){
-            var 
-        }
-}
+const quantidade = parseFloat(prompt("Quantos litros de deseja?"));
+
+
+    switch (tipo) {
+        case "A":
+            const valorAlcool = 4.90;
+            let totalAlcool;
+
+            if (quantidade <= 20) {
+
+                totalAlcool = quantidade * valorAlcool;
+                let descontoAlcool = totalAlcool * 0.03;
+                let comDescontoAlcool = totalAlcool - descontoAlcool;
+
+                alert(`Você tem direito a 3% de desconto por que colocou menos de 20 litros de alcool.`);
+                alert(`O valor com desconto é de ${comDescontoAlcool} e você economizou ${descontoAlcool}`);
+
+            } else if (quantidade > 20) {
+
+                totalAlcool = quantidade * valorAlcool;
+                let descontoAlcool = totalAlcool * 0.05;
+                let comDescontoAlcool = totalAlcool - descontoAlcool;
+
+                alert(`Você tem direito a 5% de desconto pois colocou mais de 20 litros`);
+                alert(`O valor com desconto acima de 20 litros é de ${comDescontoAlcool} você economizou ${descontoAlcool}`);
+            }else{
+
+                alert("Tente novamente.");
+
+            }
+
+            break;
+
+        case "G":
+
+            const quantidadeGasolina = parseFloat(prompt("Quantos litros você de Gasolina deseja adicionar:"));
+            const valorGasolina = 5.30;
+            var totalGasolina;
+
+            if (quantidadeGasolina <= 20) {
+
+                totalGasolina = valorGasolina * quantidadeGasolina;
+                const descontoGasolina = totalGasolina * 0.04;
+                const comDescontoGasolina = totalGasolina - descontoGasolina;
+
+                alert(`Você tem direito a 4% de desconto pois colocou menos de 20 litros`);
+                alert(`O valor com desconto é de ${comDescontoGasolina} você economizou ${descontoGasolina}`);
+
+            } else {
+
+                totalGasolina = valorGasolina * quantidadeGasolina;
+                const descontoGasolina = totalGasolina * 0.06;
+                const comDesconto = totalGasolina - descontoGasolina;
+
+                alert(`Você tem direito a 4% de desconto pois colocou menos de 20 litros`);
+                alert(`O valor com desconto é de ${comDesconto.toFixed(4)} você economizou ${descontoGasolina.toFixed(4)}`);
+            }
+
+            break;
+
+        default:
+
+            alert("Opção invalida");
+            
+            break;
+    }
