@@ -29,7 +29,7 @@
 
 const tipo = prompt("Qual tipo de combustivel você deseja: \n A - Álcool \n G - Gasolina").toLocaleUpperCase()
 
-const quantidade = parseFloat(prompt("Quantos litros de deseja?"));
+const quantidade = parseFloat(prompt("Quantos litros você deseja?"));
 
 
     switch (tipo) {

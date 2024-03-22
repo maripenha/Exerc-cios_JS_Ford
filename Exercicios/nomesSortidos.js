@@ -9,8 +9,8 @@ for (let i =0; i < quantosNomes;i++){
     let nome = prompt ("Insira seu nome:")
     nomes.push (nome)
 }
-let procurar = prompt("Chute algum nome")
-if (nomes[length] == procurar){
+ const = prompt("Chute algum nome")
+if (nomes[ResizeObserverSize] == procurar){
     alert(`Você acertou um dos nomes. A lista contém os seguintes nomes: ${nomes} e você acertou com o nome ${procurar}`)
 }else{
     alert("Você errou o nome tente novamente.")
